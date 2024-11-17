@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM python:3.13-slim
 
 WORKDIR /app
 
@@ -9,6 +9,6 @@ RUN pip install --upgrade pip \
 
 COPY . .
 
-#ENV SECRET_KEY=******
+EXPOSE 5000
 
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["gunicorn", "--workers", "4", "--bind", "0.0.0.0:5000", "app:app"]

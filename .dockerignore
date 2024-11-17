@@ -1,22 +1,22 @@
-# Ignora archivos de Python compilados
-__pycache__/
-*.pyc
-
-# Ignora archivos y carpetas de configuración de entorno virtual
-venv/
-.env
-
-# Ignora archivos de configuración de Docker
+# Docker
 Dockerfile
 .dockerignore
 
-# Ignora archivos de control de versiones
+# Git
 .git
 .gitignore
 
-# Ignora carpetas de testeo y ejemplos
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Testing and examples
 tests/
 examples/
 
-# Ignora otros archivos innecesarios
-*.log
+# virtualenv
+venv/
+.env
